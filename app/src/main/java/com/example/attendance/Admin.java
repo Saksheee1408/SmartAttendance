@@ -74,19 +74,20 @@ public class Admin extends AppCompatActivity {
     }
 
     private void loginUser(String email, String password) {
-        auth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(Admin.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(Admin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                            // Redirect to some other activity if needed
-                        } else {
-                            Toast.makeText(Admin.this, "Login Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+        // Define your static credentials
+        String staticEmail = "admin@example.com";
+        String staticPassword = "admin123";
+
+        if (email.equals(staticEmail) && password.equals(staticPassword)) {
+            Toast.makeText(Admin.this, "Admin Login Successful!", Toast.LENGTH_SHORT).show();
+            // Redirect to another activity after successful login
+            startActivity(new Intent(Admin.this, Add_Student.class)); // Example Dashboard
+            finish();
+        } else {
+            Toast.makeText(Admin.this, "Invalid Admin Credentials", Toast.LENGTH_SHORT).show();
+        }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
