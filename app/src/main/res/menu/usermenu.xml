@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+    <item
+        android:id="@+id/Admin"
+        android:orderInCategory="100"
+        android:title="Admin"
+        />
+    <item
+        android:id="@+id/User"
+        android:orderInCategory="100"
+        android:title="User"
+        />
 </menu>
