@@ -27,7 +27,7 @@ public class Admin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user); // connecting to your XML layout
+        setContentView(R.layout.activity_admin); // connecting to your XML layout
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance();
@@ -35,7 +35,7 @@ public class Admin extends AppCompatActivity {
         // Link Java variables with XML elements
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.pass);
-        loginButton = findViewById(R.id.button);
+        loginButton = findViewById(R.id.button2);
 
         // Set click listener on Login button
         loginButton.setOnClickListener(new View.OnClickListener() {

@@ -10,7 +10,7 @@ public class LogoutViewModel extends ViewModel {
 
     public LogoutViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("Are you sure you want to logout?");
     }
 
     public LiveData<String> getText() {
