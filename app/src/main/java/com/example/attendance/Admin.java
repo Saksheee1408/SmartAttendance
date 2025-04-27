@@ -78,10 +78,11 @@ public class Admin extends AppCompatActivity {
         String staticEmail = "admin@example.com";
         String staticPassword = "admin123";
 
+
         if (email.equals(staticEmail) && password.equals(staticPassword)) {
             Toast.makeText(Admin.this, "Admin Login Successful!", Toast.LENGTH_SHORT).show();
             // Redirect to another activity after successful login
-            startActivity(new Intent(Admin.this, Add_Student.class)); // Example Dashboard
+            startActivity(new Intent(Admin.this, next.class)); // Example Dashboard
             finish();
         } else {
             Toast.makeText(Admin.this, "Invalid Admin Credentials", Toast.LENGTH_SHORT).show();

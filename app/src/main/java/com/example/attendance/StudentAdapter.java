@@ -1,61 +1,54 @@
-package com.example.attendance.ui;
+package com.example.attendance;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentViewHolder> {
 
-    private List<> examList;
+    List<Student> studentList;
 
-    // Constructor
-    public MyAdapter(List<ExamItem> examList) {
-        this.examList = examList;
+    public StudentAdapter(List<Student> studentList) {
+        this.studentList = studentList;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.exam_card, parent, false);
-        return new MyViewHolder(view);
+    public StudentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        return new StudentViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        ExamItem examItem = examList.get(position);
-
-        holder.examName.setText(examItem.getName());
-        holder.examDate.setText(examItem.getDate());
-        holder.examMessage.setText(examItem.getMessage());
-        holder.examPic.setImageResource(examItem.getImage1());
-        holder.examPic2.setImageResource(examItem.getImage2());
+    public void onBindViewHolder(@NonNull StudentViewHolder holder, int position) {
+        Student student = studentList.get(position);
+        holder.name.setText(student.getUsername());
+        holder.college.setText(student.getCollege());
+        holder.department.setText(student.getDepartment());
+        holder.email.setText(student.getEmail());
+        holder.phone.setText(student.getPhone());
+        holder.password.setText(student.getPassword());
     }
 
     @Override
     public int getItemCount() {
-        return examList.size();
+        return studentList.size();
     }
 
-    // ViewHolder class
-    static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView examName, examDate, examMessage;
-        ImageView examPic, examPic2;
+    class StudentViewHolder extends RecyclerView.ViewHolder {
+        TextView name, college, department, email, phone, password;
 
-        public MyViewHolder(@NonNull View itemView) {
-
+        public StudentViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            examName = itemView.findViewById(R.id.examName);
-            examDate = itemView.findViewById(R.id.examDate);
-            examMessage = itemView.findViewById(R.id.examMessage);
-            examPic = itemView.findViewById(R.id.examPic);
-            examPic2 = itemView.findViewById(R.id.examPic2);
+            name = itemView.findViewById(R.id.name);
+            college = itemView.findViewById(R.id.college);
+            department = itemView.findViewById(R.id.department);
+            email = itemView.findViewById(R.id.email);
+            phone = itemView.findViewById(R.id.phone);
+            password = itemView.findViewById(R.id.password);
         }
     }
 }
-
