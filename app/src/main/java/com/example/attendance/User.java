@@ -48,6 +48,7 @@ public class User extends AppCompatActivity {
                     Toast.makeText(User.this, "Please enter email and password", Toast.LENGTH_SHORT).show();
                 } else {
                     loginUser(email, password);
+                    
                 }
             }
         });

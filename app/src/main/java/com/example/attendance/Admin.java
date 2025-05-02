@@ -27,7 +27,7 @@ public class Admin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user); // connecting to your XML layout
+        setContentView(R.layout.activity_admin);
 
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance();
