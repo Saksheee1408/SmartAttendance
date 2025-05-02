@@ -19,6 +19,12 @@
             android:name=".next"
             android:exported="false" />
         <activity
+            android:name=".GenerateAttendanceQRActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AttendanceListActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat"
             android:exported="false" />

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class next extends AppCompatActivity {
-   Button add,details,laptop,check;
+   Button add,details,laptop,check,generateQr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +17,7 @@ public class next extends AppCompatActivity {
         details=findViewById(R.id.details);
         laptop=findViewById(R.id.laptop);
         check=findViewById(R.id.check);
+        generateQr = findViewById(R.id.generateQr);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,6 +28,18 @@ public class next extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(next.this,Student_list.class));
+            }
+        });
+        generateQr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(next.this, GenerateAttendanceQRActivity.class));
+            }
+        });
+        check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(next.this, AttendanceListActivity.class));
             }
         });
     }
