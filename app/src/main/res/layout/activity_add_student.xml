@@ -8,12 +8,31 @@
     android:background="@drawable/add">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/contact"
         android:layout_width="361dp"
         android:layout_height="40dp"
         android:ems="10"
+        android:hint="Contact"
         android:inputType="text"
-        android:text="Name"
+        android:textColorHint="#393737"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="361dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Name Of The Student"
+        android:inputType="text"
+        android:textColorHint="#3E3C3C"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,15 +40,64 @@
         app:layout_constraintVertical_bias="0.389" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/college"
         android:layout_width="361dp"
         android:layout_height="40dp"
         android:ems="10"
+        android:hint="College Name"
         android:inputType="text"
-        android:text="Name"
+        android:textColorHint="#2B2929"
+        android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="361dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text"
+        android:textColorHint="#403C3C"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.693" />
+
+    <EditText
+        android:id="@+id/department"
+        android:layout_width="361dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Department"
+        android:inputType="text"
+        android:textColorHint="#333030"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#EAE8E8"
+        android:text="Submit"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

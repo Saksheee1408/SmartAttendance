@@ -80,6 +80,8 @@ public class User extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(User.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(User.this, MainActivity.class)); // Example Dashboard
+                            finish();
                             // Redirect to some other activity if needed
                         } else {
                             Toast.makeText(User.this, "Login Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

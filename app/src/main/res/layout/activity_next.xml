@@ -4,6 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".next">
+    tools:context=".next"
+    android:background="@drawable/adminp">
 
+    <Button
+        android:id="@+id/laptop"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#E1DDDD"
+        android:text="Check Laptop Status"
+        android:textColor="#0E0B0B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.802" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#F4EEEE"
+        android:text="Add Student"
+        android:textColor="#0E0D0D"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.354" />
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#EDDADA"
+        android:text="Check Attendance"
+        android:textColor="#131010"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <Button
+        android:id="@+id/details"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#EADDDD"
+        android:text="View Student Details"
+        android:textColor="#0C0B0B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 </androidx.constraintlayout.widget.ConstraintLayout>
